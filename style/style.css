@@ -1,0 +1,183 @@
+/* || General setup */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 70%;
+    min-width: 800px;
+    margin: 0 auto;
+    background-color: #fdfdfd;
+}
+
+/* || typography */
+h1,
+h2,
+h3 {
+    font-family: "Poppins", cursive;
+    color: #2a2a2a;
+}
+
+p,
+input,
+li {
+    font-family: "Poppins", sans-serif;
+    color: #2a2a2a;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+p,
+li {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* || header layout */
+
+header {
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+body > * {
+    background-color: #fcfcfc;
+    padding: 1%;
+}
+
+main,
+header,
+footer {
+    background-color: #fcfcfc;
+}
+
+main,
+header,
+nav,
+article,
+section,
+aside,
+footer {
+    padding: 2%;
+}
+
+h1 {
+    flex: 5;
+    text-transform: uppercase;
+}
+
+header img {
+    display: block;
+    height: 60px;
+    padding-top: 20.15px;
+    margin-right: 20px;
+}
+
+nav {
+    flex: 100%;
+    display: flex;
+    background-color: #fafafa;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+}
+
+nav li {
+    display: inline;
+    text-align: center;
+    flex: 1;
+}
+
+nav a,
+nav span {
+    display: inline-block;
+    font-size: 1.75rem;
+    font-weight: 600;
+    height: 3rem;
+    line-height: 1.7;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    transition: all ease-out 0.2s;
+}
+
+nav a:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.507);
+    color: rgb(92, 90, 90);
+}
+
+nav .active-link {
+    border-bottom: 2px solid black;
+}
+
+header .logo {
+    display: flex;
+    margin: 0 auto;
+}
+
+/* || main layout */
+
+main {
+    display: flex;
+}
+
+article,
+section {
+    flex: 4;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    padding: 2% 4%;
+    background-color: #fafafa;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+aside a {
+    display: block;
+    float: left;
+    width: 200px;
+    margin-top: 5px;
+}
+
+aside img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    margin-top: 10px;
+    text-align: center;
+}
