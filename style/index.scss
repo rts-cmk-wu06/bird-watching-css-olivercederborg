@@ -9,6 +9,10 @@ $headingColor: #fcfcfc;
    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+* {
+   box-sizing: border-box;
+}
+
 body {
    margin: 0;
    padding: 0;
@@ -18,21 +22,29 @@ body {
    background-color: $bgColor;
    header {
       @include navShadow;
-      height: 100px;
+      height: 80px;
       display: flex;
       flex-direction: row;
       background-color: #1d1d1d;
       justify-content: space-between;
       align-items: center;
-      padding: 0 2%;
+      padding: 0 2% 0 0;
+
       .logo-wrapper {
          display: flex;
-         flex-direction: row;
          justify-content: center;
          align-items: center;
+         flex-direction: row;
+         height: 100%;
          .logo {
+            background: linear-gradient(to top right, #e58c8a, #eec0c6);
+            color: white;
             font-size: 2rem;
-            color: #34d399;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 5rem;
+            height: 100%;
          }
          h1 {
             font-size: 1.5rem;
@@ -60,21 +72,29 @@ body {
                   font-weight: 600;
                   text-decoration: none;
                   color: #d4d4d4;
-                  padding: 36px 0;
+                  padding: 25px 0;
                   border-bottom: 3px solid transparent;
                   transition: all ease-out 0.2s;
                   &:hover {
-                     border-bottom: 3px solid #10b981;
+                     border-bottom: 3px solid white;
                      color: #fcfcfc;
                   }
                }
                .active-link {
-                  border-bottom: 3px solid #34d399;
-                  color: #34d399;
-                  &:hover {
-                     border-bottom: 3px solid #34d399;
-                     color: #34d399;
-                  }
+                  border: 0px solid;
+                  border-image-slice: 1;
+                  border-bottom-width: 3px;
+                  border-style: solid;
+                  border-image-source: linear-gradient(to top right, #e58c8a, #eec0c6);
+                  color: white;
+                  background: linear-gradient(to top right, #e58c8a, #eec0c6);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+
+                  // &:hover {
+                  //    border-bottom: 3px solid #34d399;
+                  //    color: #34d399;
+                  // }
                }
             }
          }
@@ -86,6 +106,7 @@ body {
       display: flex;
       flex-direction: row;
       padding: 2%;
+      padding-bottom: 100px;
       margin: 2rem 0;
 
       article {
@@ -98,6 +119,18 @@ body {
             font-size: 3rem;
             font-weight: 600;
             margin: 0;
+            margin-top: 30px;
+         }
+         section {
+            display: flex;
+            flex-direction: column;
+            img {
+               width: 100%;
+               max-height: 40vh;
+               object-fit: cover;
+               object-position: 50% 25%;
+               border-radius: 5px;
+            }
          }
       }
 
@@ -112,6 +145,7 @@ body {
          align-items: center;
          overflow: hidden;
          border-radius: 5px;
+         height: fit-content;
          h2 {
             color: $headingColor;
             font-size: 1.75rem;
@@ -123,8 +157,13 @@ body {
             justify-content: center;
             align-items: center;
             margin-top: 0.5rem;
+            overflow: hidden;
             img {
                height: auto;
+               transition: all ease-in-out 0.2s;
+               &:hover {
+                  transform: scale(1.1);
+               }
             }
             &:last-child,
             &:first-of-type {
@@ -132,17 +171,20 @@ body {
             }
          }
          .load_more_pictures {
+            border: 0px solid;
+            border-image-slice: 1;
+            border-bottom-width: 4px;
+            border-style: solid;
+            border-image-source: linear-gradient(to top right, #e58c8a, #eec0c6);
             color: #d4d4d4;
             text-decoration: none;
             height: 60px;
             width: 100%;
-            border-bottom: 4px solid #10b981;
             transition: all ease-out 0.2s;
             cursor: pointer;
             margin-top: 0.5rem;
             &:hover {
-               background-color: #10b981;
-               border-bottom: 4px solid #047857;
+               background: linear-gradient(to top right, #e58c8a, #eec0c6);
                color: white;
             }
          }
